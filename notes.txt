@@ -1,0 +1,2 @@
+geojson.io to manually build stations geojson (nodes)
+creates routes file to define station pairs (edges)
