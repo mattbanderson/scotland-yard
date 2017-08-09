@@ -1,12 +1,20 @@
 const fs = require('fs');
 
 const routeData = require('../routes.json');
-const syData = require('../../public/data/sy.json');
+const taxiData = require('../../public/data/taxi.json');
+const busData = require('../../public/data/bus.json');
+const undergroundData = require('../../public/data/underground.json');
 
 // Construct map of stations by station number
 stations = {};
-syData.features.forEach(f => {
+taxiData.features.forEach(f => {
   stations[f.properties.station] = f.geometry.coordinates;
+});
+busData.features.forEach(f => {
+  stations[f.properties.station] = f.geometry.coordinates;
+});
+syData.features.forEach(f => {
+  undergroundData[f.properties.station] = f.geometry.coordinates;
 });
 
 function getRouteColor(routeType) {

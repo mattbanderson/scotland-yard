@@ -8,32 +8,72 @@
   });
 
   map.on('load', function () {
-    map.addSource('stations', { type: 'geojson', data: './data/sy.json' });
-    map.addLayer({
-        "id": "stations",
-        "type": "symbol",
-        "source": "stations",
-        "layout": {
-            "icon-image": "rocket-15"
-        }
-    });
 
-    map.addSource('routes', { type: 'geojson', data: './data/routes.geo.json' });
-    map.addLayer({
-        "id": "routes",
-        "type": "line",
-        "source": "routes",
-        "layout": {
-            "line-join": "round",
-            "line-cap": "round"
-        },
-        "paint": {
-          'line-color': {
-             'type': 'identity',
-             'property': 'color'
-          },
-          "line-width": 4
-        }
+    map.loadImage('img/taxi.png', function(error, imgTaxi) {
+      map.loadImage('img/bus.png', function(error, imgBus) {
+        map.loadImage('img/underground.png', function(error, imgUnderground) {
+
+          map.addSource('routes', { type: 'geojson', data: './data/routes.geo.json' });
+          map.addLayer({
+              "id": "routes",
+              "type": "line",
+              "source": "routes",
+              "layout": {
+                  "line-join": "round",
+                  "line-cap": "round"
+              },
+              "paint": {
+                'line-color': {
+                   'type': 'identity',
+                   'property': 'color'
+                },
+                "line-width": 4
+              }
+          });
+
+          map.addImage('taxi-icon', imgTaxi);
+          map.addSource('taxi', { type: 'geojson', data: 'data/taxi.json' });
+          map.addLayer({
+              "id": "taxi",
+              "type": "symbol",
+              "source": "taxi",
+              "layout": {
+                  "icon-image": "taxi-icon",
+                  "icon-size": 1.25,
+                  "text-field": "{station}",
+                  "text-size": 8
+              }
+          });
+
+          map.addImage('bus-icon', imgBus);
+          map.addSource('bus', { type: 'geojson', data: 'data/bus.json' });
+          map.addLayer({
+              "id": "bus",
+              "type": "symbol",
+              "source": "bus",
+              "layout": {
+                  "icon-image": "bus-icon",
+                  "icon-size": 1.25,
+                  "text-field": "{station}",
+                  "text-size": 8
+              }
+          });
+
+          map.addImage('underground-icon', imgUnderground);
+          map.addSource('underground', { type: 'geojson', data: 'data/underground.json' });
+          map.addLayer({
+              "id": "underground",
+              "type": "symbol",
+              "source": "underground",
+              "layout": {
+                  "icon-image": "underground-icon",
+                  "icon-size": 1.25,
+                  "text-field": "{station}",
+                  "text-size": 8
+              }
+          });
+        });
+      });
     });
   });
 }());
