@@ -13,7 +13,7 @@
       map.loadImage('img/bus.png', function(error, imgBus) {
         map.loadImage('img/underground.png', function(error, imgUnderground) {
 
-          map.addSource('routes', { type: 'geojson', data: './data/routes.geo.json' });
+          map.addSource('routes', { type: 'geojson', data: 'data/routes.geo.json' });
           map.addLayer({
               "id": "routes",
               "type": "line",

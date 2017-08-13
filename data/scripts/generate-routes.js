@@ -13,8 +13,8 @@ taxiData.features.forEach(f => {
 busData.features.forEach(f => {
   stations[f.properties.station] = f.geometry.coordinates;
 });
-syData.features.forEach(f => {
-  undergroundData[f.properties.station] = f.geometry.coordinates;
+undergroundData.features.forEach(f => {
+  stations[f.properties.station] = f.geometry.coordinates;
 });
 
 function getRouteColor(routeType) {
@@ -48,11 +48,21 @@ routeGeoJson = {
   "features": []
 }
 routeData.forEach(r => {
+  if (r.type === 'taxi')
+  {
+  let waypoints = []
   let start = stations[r.stations[0]];
+  waypoints.push(start);
+  if (r.via) {
+    r.via.forEach(v => {
+      waypoints.push(stations[v]);
+    });
+  }
   let stop = stations[r.stations[1]];
-  let newRoute = buildRouteGeoJson(r.type, [start, stop]);
-  console.log(newRoute, start, stop);
+  waypoints.push(stop)
+  let newRoute = buildRouteGeoJson(r.type, waypoints);
   routeGeoJson.features.push(newRoute);
+}
 });
 
 fs.writeFile("../../public/data/routes.geo.json", JSON.stringify(routeGeoJson), function(err) {

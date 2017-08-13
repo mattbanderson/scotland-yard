@@ -291,6 +291,19 @@
     {
       "type": "Feature",
       "properties": {
+        "station": "62"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.15151262283325195,
+          51.517983287008434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "station": "47"
       },
       "geometry": {
