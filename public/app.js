@@ -7,6 +7,10 @@
       zoom: 13.5 // starting zoom
   });
 
+  map.on('contextmenu', function (e) {
+      document.getElementById('info').innerHTML = e.lngLat;
+  });
+
   map.on('load', function () {
 
     map.loadImage('img/taxi.png', function(error, imgTaxi) {
@@ -27,7 +31,11 @@
                    'type': 'identity',
                    'property': 'color'
                 },
-                "line-width": 4
+                "line-width": 4,
+                "line-offset": {
+                  "type": "identity",
+                  "property": "offset"
+                }
               }
           });
 

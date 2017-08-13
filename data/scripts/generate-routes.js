@@ -4,6 +4,7 @@ const routeData = require('../routes.json');
 const taxiData = require('../../public/data/taxi.json');
 const busData = require('../../public/data/bus.json');
 const undergroundData = require('../../public/data/underground.json');
+const ghostData = require('../../public/data/ghost.json');
 
 // Construct map of stations by station number
 stations = {};
@@ -14,6 +15,9 @@ busData.features.forEach(f => {
   stations[f.properties.station] = f.geometry.coordinates;
 });
 undergroundData.features.forEach(f => {
+  stations[f.properties.station] = f.geometry.coordinates;
+});
+ghostData.features.forEach(f => {
   stations[f.properties.station] = f.geometry.coordinates;
 });
 
@@ -30,10 +34,12 @@ function getRouteColor(routeType) {
 }
 
 function buildRouteGeoJson(routeType, coords) {
+  const OFFSET = 4;
   return {
     "type": "Feature",
     "properties": {
       "type": routeType,
+      "offset": routeType === "bus" ? OFFSET : routeType === "underground" ? -OFFSET : 0,
       "color": getRouteColor(routeType)
     },
     "geometry": {
@@ -48,8 +54,6 @@ routeGeoJson = {
   "features": []
 }
 routeData.forEach(r => {
-  if (r.type === 'taxi')
-  {
   let waypoints = []
   let start = stations[r.stations[0]];
   waypoints.push(start);
@@ -62,7 +66,6 @@ routeData.forEach(r => {
   waypoints.push(stop)
   let newRoute = buildRouteGeoJson(r.type, waypoints);
   routeGeoJson.features.push(newRoute);
-}
 });
 
 fs.writeFile("../../public/data/routes.geo.json", JSON.stringify(routeGeoJson), function(err) {

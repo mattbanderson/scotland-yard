@@ -44,6 +44,10 @@
     "type": "taxi"
   },
   {
+    "stations": ["31", "44"],
+    "type": "taxi"
+  },
+  {
     "stations": ["33", "46"],
     "type": "taxi"
   },
@@ -229,7 +233,8 @@
   },
   {
     "stations": ["58", "74"],
-    "type": "bus"
+    "type": "bus",
+    "via": ["5874", "587475"]
   },
   {
     "stations": ["58", "77"],

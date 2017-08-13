@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "station": "587475"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.1728898286819458,
+          51.51708532632848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "station": "5874"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.16904890537261963,
+          51.51924173742611
+        ]
+      }
+    }
+  ]
+}

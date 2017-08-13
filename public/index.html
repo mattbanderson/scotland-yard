@@ -9,10 +9,22 @@
       <style>
           body { margin:0; padding:0; }
           #map { position:absolute; top:0; bottom:0; width:100%; }
+          #info {
+              display: block;
+              position: relative;
+              margin: 0px auto;
+              padding: 10px;
+              border: none;
+              border-radius: 3px;
+              font-size: 12px;
+              text-align: right;
+              color: #222;
+          }
       </style>
   </head>
   <body>
     <div id='map'></div>
+    <pre id='info'></pre>
     <script src='./app.js'></script>
   </body>
 </html>

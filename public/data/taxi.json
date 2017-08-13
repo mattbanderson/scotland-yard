@@ -4,6 +4,19 @@
     {
       "type": "Feature",
       "properties": {
+        "station": "2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.15581111946480064,
+          51.53585117039185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "station": "8"
       },
       "geometry": {
@@ -22,8 +35,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.16863584518432617,
-          51.530018924262265
+          -0.1690250036072598,
+          51.530037751839615
         ]
       }
     },
