@@ -39,9 +39,9 @@
               "source": "taxi",
               "layout": {
                   "icon-image": "taxi-icon",
-                  "icon-size": 1.25,
+                  "icon-size": 1,
                   "text-field": "{station}",
-                  "text-size": 8
+                  "text-size": 12
               }
           });
 
@@ -53,9 +53,9 @@
               "source": "bus",
               "layout": {
                   "icon-image": "bus-icon",
-                  "icon-size": 1.25,
+                  "icon-size": 1,
                   "text-field": "{station}",
-                  "text-size": 8
+                  "text-size": 12
               }
           });
 
@@ -67,9 +67,9 @@
               "source": "underground",
               "layout": {
                   "icon-image": "underground-icon",
-                  "icon-size": 1.25,
+                  "icon-size": 1,
                   "text-field": "{station}",
-                  "text-size": 8
+                  "text-size": 12
               }
           });
         });
