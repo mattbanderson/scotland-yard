@@ -82,6 +82,16 @@
     {
       "type": "Feature",
       "properties": {
+        "station": "89"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-0.08896266128394359, 51.513426265033644]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "station": "93"
       },
       "geometry": {
