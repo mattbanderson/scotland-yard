@@ -251,16 +251,6 @@
     {
       "type": "Feature",
       "properties": {
-        "station": "115"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-0.11808882023279921, 51.50989569950326]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "station": "72"
       },
       "geometry": {
