@@ -63,11 +63,12 @@
   {
     "stations": ["34", "46"],
     "type": "bus",
-    "via": ["47W", "47"]
+    "via": ["47", "47W"]
   },
   {
-    "stations": ["34", "48"],
-    "type": "bus"
+    "stations": ["34", "63"],
+    "type": "bus",
+    "via": ["48", "63E"]
   },
   {
     "stations": ["46", "58"],
@@ -96,7 +97,8 @@
   },
   {
     "stations": ["63", "65"],
-    "type": "bus"
+    "type": "bus",
+    "via": ["63E"]
   },
   {
     "stations": ["63", "79"],
@@ -143,6 +145,10 @@
     "via": ["100S", "112"]
   },
   {
+    "stations": ["108", "135"],
+    "type": "bus"
+  },
+  {
     "stations": ["111", "124"],
     "type": "bus",
     "via": ["124E"]
@@ -160,6 +166,11 @@
     "stations": ["124", "153"],
     "type": "bus",
     "via": ["124138", "138152", "153W"]
+  },
+  {
+    "stations": ["136", "161"],
+    "type": "bus",
+    "via": ["136S", "136161", "161E"]
   },
   {
     "stations": ["165", "180"],
@@ -464,6 +475,11 @@
     "via": ["62N"]
   },
   {
+    "stations": ["48", "63"],
+    "type": "taxi",
+    "via": ["63E"]
+  },
+  {
     "stations": ["49", "50"],
     "type": "taxi",
     "via": ["4950", "4950SE"]
@@ -573,7 +589,8 @@
   },
   {
     "stations": ["63", "64"],
-    "type": "taxi"
+    "type": "taxi",
+    "via": ["63E"]
   },
   {
     "stations": ["63", "79"],
@@ -602,7 +619,8 @@
   },
   {
     "stations": ["66", "82"],
-    "type": "taxi"
+    "type": "taxi",
+    "via": ["66S", "6682"]
   },
   {
     "stations": ["67", "68"],
@@ -681,6 +699,11 @@
     "type": "taxi"
   },
   {
+    "stations": ["80", "100"],
+    "type": "taxi",
+    "via": ["80100", "100W"]
+  },
+  {
     "stations": ["81", "100"],
     "type": "taxi"
   },
@@ -713,6 +736,10 @@
     "stations": ["86", "103"],
     "type": "taxi",
     "via": ["103E"]
+  },
+  {
+    "stations": ["86", "104"],
+    "type": "taxi"
   },
   {
     "stations": ["87", "88"],
@@ -788,9 +815,18 @@
     "via": ["102103"]
   },
   {
+    "stations": ["102", "114"],
+    "type": "taxi",
+    "via": ["102114", "102115"]
+  },
+  {
     "stations": ["102", "115"],
     "type": "taxi",
     "via": ["102SW", "102115N", "102115"]
+  },
+  {
+    "stations": ["104", "116"],
+    "type": "taxi"
   },
   {
     "stations": ["106", "107"],
@@ -836,12 +872,12 @@
   },
   {
     "stations": ["114", "126"],
-    "type": "taxi",
-    "via": ["102115"]
+    "type": "taxi"
   },
   {
     "stations": ["114", "131"],
-    "type": "taxi"
+    "type": "taxi",
+    "via": ["114SW"]
   },
   {
     "stations": ["114", "132"],
@@ -851,6 +887,30 @@
     "stations": ["115", "126"],
     "type": "taxi",
     "via": ["115126"]
+  },
+  {
+    "stations": ["115", "127"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["116", "117"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["116", "127"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["117", "129"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["118", "129"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["118", "134"],
+    "type": "taxi"
   },
   {
     "stations": ["123", "124"],
@@ -876,11 +936,30 @@
     "via": ["125E"]
   },
   {
-    "stations": ["132", "140"],
+    "stations": ["127", "134"],
     "type": "taxi"
   },
   {
-    "stations": ["133", "140"],
+    "stations": ["128", "143"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["128", "160"],
+    "type": "taxi",
+    "via": ["160W"]
+  },
+  {
+    "stations": ["128", "172"],
+    "type": "taxi",
+    "via": ["128172"]
+  },
+  {
+    "stations": ["128", "188"],
+    "type": "taxi",
+    "via": ["128172", "128188"]
+  },
+  {
+    "stations": ["132", "140"],
     "type": "taxi"
   },
   {
@@ -890,6 +969,23 @@
   {
     "stations": ["130", "139"],
     "type": "taxi"
+  },
+  {
+    "stations": ["133", "140"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["133", "141"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["135", "143"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["135", "161"],
+    "type": "taxi",
+    "via": ["135161"]
   },
   {
     "stations": ["138", "150"],
@@ -911,6 +1007,14 @@
   },
   {
     "stations": ["140", "156"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["141", "158"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["142", "143"],
     "type": "taxi"
   },
   {
@@ -945,8 +1049,21 @@
     "type": "taxi"
   },
   {
+    "stations": ["157", "158"],
+    "type": "taxi"
+  },
+  {
     "stations": ["157", "170"],
     "type": "taxi"
+  },
+  {
+    "stations": ["161", "174"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["162", "175"],
+    "type": "taxi",
+    "via": ["174175"]
   },
   {
     "stations": ["165", "179"],
@@ -970,6 +1087,30 @@
     "type": "taxi"
   },
   {
+    "stations": ["171", "175"],
+    "type": "taxi",
+    "via": ["171175"]
+  },
+  {
+    "stations": ["171", "199"],
+    "type": "taxi",
+    "via": ["171173", "171199", "199E"]
+  },
+  {
+    "stations": ["171", "173"],
+    "type": "taxi",
+    "via": ["171173"]
+  },
+  {
+    "stations": ["172", "187"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["174", "175"],
+    "type": "taxi",
+    "via": ["174175"]
+  },
+  {
     "stations": ["179", "191"],
     "type": "taxi"
   },
@@ -980,6 +1121,20 @@
   {
     "stations": ["184", "185"],
     "type": "taxi"
+  },
+  {
+    "stations": ["186", "198"],
+    "type": "taxi",
+    "via": ["186198A", "186198B", "186198C", "186198D", "186198F", "198NW"]
+  },
+  {
+    "stations": ["187", "198"],
+    "type": "taxi"
+  },
+  {
+    "stations": ["188", "199"],
+    "type": "taxi",
+    "via": ["188S", "188199", "199N"]
   },
   {
     "stations": ["190", "191"],

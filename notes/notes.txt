@@ -5,3 +5,4 @@ not good enough, need to stick more closely to roadways
   -"ghost" stations
   -how to name/reference ghost stations -> combine stations connected
 different types of routes following same path -> line-offset
+clipboard geojson to collect data
