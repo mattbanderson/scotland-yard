@@ -2,7 +2,7 @@ geojson.io to manually build stations geojson (nodes)
 creates routes file to define station pairs (edges)
 added concept of "via" waypoints to route through other stations
 not good enough, need to stick more closely to roadways
-  -"ghost" stations
+  -"ghost" stations vs. straight geojson linestrings
   -how to name/reference ghost stations -> combine stations connected
 different types of routes following same path -> line-offset
 clipboard geojson to collect data
