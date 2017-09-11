@@ -59,7 +59,11 @@ routeData.forEach(r => {
   waypoints.push(start);
   if (r.via) {
     r.via.forEach(v => {
-      waypoints.push(stations[v]);
+      if (v in stations) {
+        waypoints.push(stations[v]);
+      } else {
+        console.log("Not found: " + v);
+      }
     });
   }
   let stop = stations[r.stations[1]];
