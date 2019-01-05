@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "mapbox-gl": "^0.39.1",
-    "node-static": "^0.7.9"
+    "node-static": "^0.7.11"
   }
 }
